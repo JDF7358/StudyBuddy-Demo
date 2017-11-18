@@ -1,0 +1,16 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+}
+plugins {
+	id "io.ratpack.ratpack-java" version "1.5.0"
+	id "java"
+}
+dependencies {
+	compile 'postgresql:postgresql:42.1.4'
+}
+
+description = "A tool for finding study partners."
+version = '0.1'
