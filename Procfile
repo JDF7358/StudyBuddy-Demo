@@ -1,0 +1,1 @@
+web: build/install/studybuddy/bin/studybuddy
