@@ -4,12 +4,24 @@ buildscript {
 		mavenCentral()
 	}
 }
+repositories {
+	jcenter()
+}
+mainClassName = "Main"
+
 plugins {
 	id "io.ratpack.ratpack-java" version "1.5.0"
 	id "java"
 }
+
 dependencies {
-	compile 'postgresql:postgresql:42.1.4'
+	compile "org.postgresql:postgresql:42.1.4"
+	runtime "org.slf4j:slf4j-simple:1.7.12"
+	compile "com.heroku.sdk:heroku-jdbc:0.1.1"
+}
+
+task stage {
+	dependsOn installDist
 }
 
 description = "A tool for finding study partners."
